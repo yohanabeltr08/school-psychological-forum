@@ -1,0 +1,61 @@
+:root{
+    /* colores */
+    --amarillo: #E3C333;
+
+    --azulOscuro: #2E3C48;
+    --azulClaro: #87BDE9;
+    --azulNaval: #092639;
+    --azul: #6C97BD;
+    --cafe: #857B78;
+    --cafeOscuro: #515151;
+    --gris: #C9D7E0;
+    --grisT: rgba(201, 215, 224, .8);
+    --gris2T: rgba(201, 215, 224, .2);
+}
+
+.index-info {
+    background-color: var(--amarillo);
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.img-info {
+    border-radius: 2%;
+}
+
+.video-section {
+    padding: 2rem;
+}
+
+.video-title {
+    margin-bottom: 2rem;
+}
+
+.introduction {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: var(--azulClaro);
+    font-size: 1.1rem;
+}
+
+.drog-img {
+    padding-top: 15%;
+    padding-left: 3%;
+}
+
+.experience {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.experience-tittle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+}
+
+.drogs-tittle {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    
+}
