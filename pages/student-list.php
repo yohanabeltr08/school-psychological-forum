@@ -21,6 +21,15 @@
 
 </head>
 <body>
+
+<?php
+    include("../db/connection.php");
+
+    $sql ="SELECT * FROM student";
+    $students = mysqli_query($connection, $sql);
+
+?>
+
     <header class="header">
         <div class="header__fondo">
             <div class="barra contenedor">
@@ -28,7 +37,7 @@
                 <!-- Barra navegacion -->
                 <nav class="navbar navbar-expand-lg bg-body-tertiary ">
                     <div class="container-fluid">
-                      <a class="navbar-brand" href="../index.html">El Rostro De La Educación</a>
+                      <a class="navbar-brand" href="../index.php">El Rostro De La Educación</a>
 
                       <!-- Menu hamburguesa responsive -->
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +48,7 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                                    <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
                                 </li>
 
                                 <!-- Elemento Desplegable -->
@@ -48,7 +57,7 @@
                                         Discusiones
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li> <a class="dropdown-item" href="pages/discution-1.html">Consumo de sustancias</a> </li>
+                                        <li> <a class="dropdown-item" href="pages/discution-1.php">Consumo de sustancias</a> </li>
 
                                         <li class="nav-item dropdown"> 
                                             <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
@@ -74,48 +83,53 @@
         </div>
     </header>
 
-    <div class="introduction">
-        <div class="container">
-            <div class="row text-center">
-                <h1 class="drogs-tittle">¿Que es el consumo de sustancias?</h1>
-            </div>
-    
-            <div class="container">
-                <div class="row">
-        
-                    <div class="col-lg-8 col-md-8 col-sm-12 text-center"  >
-                        <p>Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
-    
-                            Existen regulaciones para el control y fiscalización del uso de estas sustancias, ya sea para uso recreativo, como el alcohol o el tabaco;  para uso farmacológico, como los tranquilizantes o analgésicos opiáceos, o  de uso general, como los solventes industriales. Hay un grupo cuyo uso es considerado ilícito y solo autorizado con fines médicos o de investigación, como el caso de la cocaína y sus derivados. El uso de sustancias psicoactivas siempre implica un grado de riesgo  de sufrir consecuencias adversas sobre distintos órganos y sistemas, las cuales pueden darse en el corto plazo, como en el caso de la intoxicación, la cual incrementa el riesgo de lesiones por accidentes o agresión, así como  conductas sexuales en condiciones inseguras. El uso repetido y  prolongado en el tiempo de estas sustancias, favorece el desarrollo de trastornos por dependencia, que son trastornos crónicos y recurrentes, caracterizados por necesidad intensa de la sustancia y pérdida de la capacidad de controlar su consumo, a pesar de consecuencias adversas en el estado de salud o en el funcionamiento interpersonal, familiar, académico, laboral o legal.
-                        </p>      
-                    </div>
-        
-                    <div class="col-lg-4 col-md-4 col-sm-12 text-center" >
-                        <div class="drog-img">
-                            <img src="../img/drog.webp"  class="img-fluid" style="max-height: 50rem;">
-                        </div>
-                    </div>
-        
-                </div>
-            </div>    
-        </div>
-    </div>
-    
+    <h1>Lista de Estudiantes</h1>
+    <a href="register.php">Nuevo Estudiante</a><br><br>
 
-    <div class="experience">
-        <div class="container text-center ">
-            <form action="" method="">
-    
-                <h4 class="experience-tittle">Describe tu experiencia: </h4>
-                
-                <div class="colum">
-                    <textarea name="experiencia" cols="100" rows="10"></textarea>
-                </div>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </div>
-    
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Genero</th>
+                <th>Grado</th>
+                <th>Colegio</th>
+                <th>Pais</th>
+                <th>Ciudad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                while($row = mysqli_fetch_assoc($students)) {
+            ?>
+            <tr>
+                <td> <?php echo $row['id'] ?> </td>
+                <td> <?php echo $row['names'] ?> </td>
+                <td> <?php echo $row['last_names'] ?> </td>
+                <td> <?php echo $row['gender'] ?> </td>
+                <td> <?php echo $row['school'] ?> </td>
+                <td> <?php echo $row['grade'] ?> </td>
+                <td> <?php echo $row['country'] ?> </td>
+                <td> <?php echo $row['city'] ?> </td>
+                <td> 
+                    <?php echo "<a href='' >Editar</a>"; ?>
+                    -
+                    <?php echo "<a href='' >Eliminar</a>"; ?>
+                </td>
+            
+            </tr>
+            <?php
+                }
+            ?>
+
+        </tbody>
+    </table>
+
+    <?php 
+        mysqli_close($connection) 
+    ?>
     
        
 

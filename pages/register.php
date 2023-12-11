@@ -21,6 +21,38 @@
 
 </head>
 <body>
+    <?php
+        if(isset($_POST['send'])) {
+            $names = $_POST['names'];
+            $last_names = $_POST['last_names'];
+            $gender = $_POST['gender'];
+            $grade = $_POST['grade'];
+            $school = $_POST['school'];
+            $country = $_POST['country'];
+            $city = $_POST['city'];
+
+            include("../db/connection.php");
+
+            $sql ="INSERT INTO student (names, last_names, gender, grade, school, country, city) 
+            VALUES ('".$names."', '".$last_names."', '".$gender."', '".$grade."', '".$school."', '".$country."', '".$city."')";
+            $result = mysqli_query($connection, $sql);
+
+            if($result) {
+                echo " <script language='JavaScript'>
+                        alert('Los datos fueron almacenados exitosamente');
+                        location.assign('student-list.php'); 
+                        </script>";
+            } else {
+                echo " <script language='JavaScript'>
+                        alert('ERROR: Los datos NO fueron almacenados');
+                        location.assign('student-list.php'); 
+                        </script>";
+            }
+
+        } else {        
+    ?>
+
+
     <header class="header">
         <div class="header__fondo">
             <div class="barra contenedor">
@@ -28,7 +60,7 @@
                 <!-- Barra navegacion -->
                 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                     <div class="container-fluid">
-                      <a class="navbar-brand" href="index.html">El Rostro De La Educación</a>
+                      <a class="navbar-brand" href="index.php">El Rostro De La Educación</a>
 
                       <!-- Menu hamburguesa responsive -->
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +71,7 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                    <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                                 </li>
 
                                 <!-- Elemento Desplegable -->
@@ -48,7 +80,7 @@
                                         Discusiones
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li> <a class="dropdown-item" href="pages/discution-1.html">Consumo de sustancias</a> </li>
+                                        <li> <a class="dropdown-item" href="pages/discution-1.php">Consumo de sustancias</a> </li>
 
                                         <li class="nav-item dropdown"> 
                                             <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
@@ -74,88 +106,35 @@
         </div>
     </header>
 
-    <!-- Carrusel fotos -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/img22.jpeg" class="d-block w-100" alt="opinion">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>HOLA</h3>
-                    <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <img src="img/Respect.jpg" class="d-block w-100" alt="respeto">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>HOLA</h3>
-                    <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <img src="img/img.11.jpeg" class="d-block w-100" alt="Trabajo en equipo">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>HOLA</h3>
-                    <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-    <div class="index-info">
-        <div class="container">
-            <div class="row">
+    <h1> Agregar Nuevo Estudiante </h1>
     
-                <div class="col-lg-6 col-md-8 col-sm-12 text-center"  >
-                    <p> Estamos emocionados de que te encuentres en este espacio dedicado a abordar las problemáticas que afectan a nuestros colegios. 
-                        En donde nosotros creemos en la importancia de crear un diálogo abierto y constructivo sobre los desafíos que enfrentamos en el ámbito educativo.
-                        Sabemos que cada uno de nosotros tiene experiencias únicas y perspectivas valiosas para compartir. Aquí, nos comprometemos a fomentar un ambiente de respeto mutuo, donde cada voz cuenta y cada opinión es valorada.
-                        Nuestro objetivo es no solo destacar las dificultades que enfrentamos, sino también encontrar soluciones y trabajar juntos para construir un entorno educativo más positivo y enriquecedor. Queremos ser un espacio donde podamos aprender unos de otros y colaborar para crear un cambio significativo.
-            
-                        Así que, únete a la conversación, comparte tus experiencias, y contribuye a la construcción de un futuro educativo más brillante. Juntos, podemos marcar la diferencia.
-                        ¡Gracias por ser parte de esta Comunidad!
-                    </p>      
-                </div>
-    
+    <form action=" <?php $_SERVER['PHP_SELF'] ?> " method="post">
+        <label>Nombre</label>
+        <input type="text" name="names"> <br>
 
-                <div class="col-lg-6 col-md-4 col-sm-12 text-center" >
-                    <div class="img-info">
-                        <img src="img/ImagEdu.jpg"  class="img-fluid" style="max-height: 22rem;">  
-                    </div>  
-                </div>
-    
-            </div>
-        </div>
-    </div>
-    
+        <label>Apellido</label>
+        <input type="text" name="last_names"> <br>
 
+        <label>Genero</label>
+        <input type="text" name="gender"> <br>
 
-    <!-- Video -->
-    <div class="container">
-        <div class="row video-section">
-            <div class="video-title">
-                <h2 class="text-center">¿Que pasa con la educacion actual?</h2>
-            </div>
-            
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jpyOQBver-M?si=kKslHxAM5h_sOtdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
+        <label>Grado</label>
+        <input type="text" name="grade"> <br>
+
+        <label>Colegio</label>
+        <input type="text" name="school"> <br>
+
+        <label>Pais</label>
+        <input type="text" name="country"> <br>
+
+        <label>Ciudad</label>
+        <input type="text" name="city"> <br>
+
+        <input type="submit" name="send" value="AGREGAR">
+        <a href="student-list.php">Regresar</a>
+
+    </form>
+    
 
 
     <!-- Footer -->
@@ -188,12 +167,14 @@
         </div>
     </footer>
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+
+
+    <?php            
+        }
+    ?>
 
 </body> 
 </html>
