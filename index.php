@@ -121,7 +121,6 @@
         </button>
     </div>
 
-
     <div class="index-info">
         <div class="container">
             <div class="row">
