@@ -17,6 +17,13 @@
 
     <link rel="preload" href="../css/style.css" as="style">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-crud.css">
+
+    <script type="text/javascript">
+        function confirmar() {
+            return confirm('¿Estas seguro?');
+        }
+    </script>
 
 
 </head>
@@ -74,6 +81,10 @@
 
                                     </ul>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="register.php">Registrarse</a>
+                                </li>
                                    
                             </ul>                        
                         </div>
@@ -84,7 +95,7 @@
     </header>
 
     <h1>Lista de Estudiantes</h1>
-    <a href="register.php">Nuevo Estudiante</a><br><br>
+    <a href="register.php" class="actions">Nuevo Estudiante</a><br><br>
 
     <table>
         <thead>
@@ -114,9 +125,9 @@
                 <td> <?php echo $row['country'] ?> </td>
                 <td> <?php echo $row['city'] ?> </td>
                 <td> 
-                    <?php echo "<a href='' >Editar</a>"; ?>
+                    <?php echo "<a href='update.php?id=".$row['id']."' class=\"actions\">Editar</a>"; ?>
                     -
-                    <?php echo "<a href='' >Eliminar</a>"; ?>
+                    <?php echo "<a href='delete.php?id=".$row['id']."' onclick='return confirmar()' class=\"actions\">Eliminar</a>"; ?>
                 </td>
             
             </tr>

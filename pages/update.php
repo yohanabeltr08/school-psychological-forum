@@ -1,10 +1,13 @@
+<?php 
+    include("../db/connection.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foro Psicologíco</title>
+    <title>Editar</title>
     <!-- preload -->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -22,8 +25,11 @@
 
 </head>
 <body>
+
     <?php
         if(isset($_POST['send'])) {
+
+            $id = $_POST['id'];
             $names = $_POST['names'];
             $last_names = $_POST['last_names'];
             $gender = $_POST['gender'];
@@ -32,27 +38,38 @@
             $country = $_POST['country'];
             $city = $_POST['city'];
 
-            include("../db/connection.php");
+            $sql_update = "UPDATE student SET names = '".$names."', last_names ='".$last_names."', gender ='".$gender."', grade ='".$grade."', school ='".$school."', country ='".$country."', city ='".$city."' WHERE id = '".$id."'";
 
-            $sql ="INSERT INTO student (names, last_names, gender, grade, school, country, city) 
-            VALUES ('".$names."', '".$last_names."', '".$gender."', '".$grade."', '".$school."', '".$country."', '".$city."')";
-            $result = mysqli_query($connection, $sql);
+            $result = mysqli_query($connection, $sql_update);
 
             if($result) {
                 echo " <script language='JavaScript'>
-                        alert('Los datos fueron almacenados exitosamente');
+                        alert('Los datos fueron actualizados exitosamente');
                         location.assign('student-list.php'); 
                         </script>";
             } else {
                 echo " <script language='JavaScript'>
-                        alert('ERROR: Los datos NO fueron almacenados');
+                        alert('ERROR: Los datos NO fueron actualizados');
                         location.assign('student-list.php'); 
                         </script>";
             }
 
-        } else {        
-    ?>
+        } else {   
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM student WHERE id = '".$id."' ";
+            $student = mysqli_query($connection, $sql);
+            $row = mysqli_fetch_assoc($student);
 
+            $names = $row["names"];
+            $last_names = $row["last_names"];
+            $gender = $row["gender"];
+            $grade = $row["grade"];
+            $school = $row["school"];
+            $country = $row["country"];
+            $city = $row["city"];
+
+            mysqli_close($connection);
+    ?>
 
     <header class="header">
         <div class="header__fondo">
@@ -112,38 +129,39 @@
     </header>
 
     <div class="title-crud">
-        <h1> Agregar Nuevo Estudiante </h1>
+        <h1> Actualizar Estudiante </h1>
     </div>
     
     <div class="student-form">
         <form action=" <?php $_SERVER['PHP_SELF'] ?> " method="post">
             <label>Nombre</label>
-            <input type="text" name="names"> <br>
+            <input type="text" name="names" value="<?php echo $names?>"> <br>
 
             <label>Apellido</label>
-            <input type="text" name="last_names"> <br>
+            <input type="text" name="last_names" value="<?php echo $last_names?>"> <br>
 
             <label>Genero</label>
-            <input type="text" name="gender"> <br>
+            <input type="text" name="gender" value="<?php echo $gender?>"> <br>
 
             <label>Grado</label>
-            <input type="text" name="grade"> <br>
+            <input type="text" name="grade" value="<?php echo $grade?>"> <br>
 
             <label>Colegio</label>
-            <input type="text" name="school"> <br>
+            <input type="text" name="school" value="<?php echo $school?>"> <br>
 
             <label>Pais</label>
-            <input type="text" name="country"> <br>
+            <input type="text" name="country" value="<?php echo $country?>"> <br>
 
             <label>Ciudad</label>
-            <input type="text" name="city"> <br>
+            <input type="text" name="city" value="<?php echo $city?>"> <br>
 
-            <input type="submit" name="send" value="AGREGAR">
+            <input type="hidden" name="id" value="<?php echo $id?>">
+
+            <input type="submit" name="send" value="ACTUALIZAR">
             <a href="student-list.php" class="actions">Regresar</a>
 
         </form>
     </div>
-    
     
 
 

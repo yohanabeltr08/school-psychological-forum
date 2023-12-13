@@ -65,6 +65,10 @@
 
                                     </ul>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="register.php">Registrarse</a>
+                                </li>
                                    
                             </ul>                        
                         </div>
