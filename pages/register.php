@@ -81,7 +81,7 @@
                                         Discusiones
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li> <a class="dropdown-item" href="pages/discution-1.php">Consumo de sustancias</a> </li>
+                                        <li> <a class="dropdown-item" href="discution-1.php">Consumo de sustancias</a> </li>
 
                                         <li class="nav-item dropdown"> 
                                             <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
