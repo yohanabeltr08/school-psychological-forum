@@ -35,7 +35,7 @@
                 <div class="row">
         
                     <div class="col-lg-8 col-md-8 col-sm-12 text-center"  >
-                        <p>Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
+                        <p class="discution-text">Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
     
                             Existen regulaciones para el control y fiscalización del uso de estas sustancias, ya sea para uso recreativo, como el alcohol o el tabaco;  para uso farmacológico, como los tranquilizantes o analgésicos opiáceos, o  de uso general, como los solventes industriales. Hay un grupo cuyo uso es considerado ilícito y solo autorizado con fines médicos o de investigación, como el caso de la cocaína y sus derivados. El uso de sustancias psicoactivas siempre implica un grado de riesgo  de sufrir consecuencias adversas sobre distintos órganos y sistemas, las cuales pueden darse en el corto plazo, como en el caso de la intoxicación, la cual incrementa el riesgo de lesiones por accidentes o agresión, así como  conductas sexuales en condiciones inseguras. El uso repetido y  prolongado en el tiempo de estas sustancias, favorece el desarrollo de trastornos por dependencia, que son trastornos crónicos y recurrentes, caracterizados por necesidad intensa de la sustancia y pérdida de la capacidad de controlar su consumo, a pesar de consecuencias adversas en el estado de salud o en el funcionamiento interpersonal, familiar, académico, laboral o legal.
                         </p>      
@@ -53,22 +53,60 @@
     </div>
     
 
-    <div class="experience">
-        <div class="container text-center ">
-            <form action="" method="">
-    
-                <h4 class="experience-tittle">Describe tu experiencia: </h4>
-                
-                <div class="colum">
-                    <textarea name="experiencia" cols="100" rows="10"></textarea>
-                </div>
-                <input type="submit" value="Enviar">
-            </form>
+    <?php
+    include('../../db/connection.php');
+
+    if(isset($_POST['send'])) {
+            $description = $_POST['text-area-experience'];
+            $experience_type = $_POST['type'];
+
+            $sql ="INSERT INTO experience (experience_type, experience_description) 
+            VALUES ('".$experience_type."', '".$description."')";
+            $result = mysqli_query($connection, $sql);
+
+            if($result) {
+                echo "<meta http-equiv='refresh' content='0'>";
+            } else {
+                echo " <script language='JavaScript'>
+                        alert('ERROR: Los datos NO fueron almacenados');
+                        </script>";
+            }
+
+        } else {
+    ?>
+        <div class="experience">
+            <div class="container text-center ">
+                <form action=" <?php $_SERVER['PHP_SELF'] ?> " method="post">
+
+                    <h4 class="experience-tittle">Describe tu experiencia: </h4>
+                    
+                    <div class="colum">
+                        <textarea name="text-area-experience" cols="100" rows="10"></textarea>
+                    </div>
+                    <input type="hidden" name="type" value="drogras">
+                    <input type="submit" value="Enviar" name="send">
+                </form>
+            </div>
         </div>
-    </div>
+
+
+    <?php
+            $sql ="SELECT * FROM experience";
+            $experiences = mysqli_query($connection, $sql);
+
+            while ($row = mysqli_fetch_assoc($experiences)) {
+                echo "<p><strong>"
+                 . $row["id"] . ":</strong> " . $row["experience_description"] . "</p>";
+            }
+            
+
+            mysqli_close($connection);
+
+        }
+
+    ?>
     
     
-       
 
     <!-- Footer -->
     <footer class="footer bg-dark text-light">

@@ -32,7 +32,7 @@
             $country = $_POST['country'];
             $city = $_POST['city'];
 
-            include("/school-psychological-forum/db/connection.php");
+            include("../../db/connection.php");
 
             $sql ="INSERT INTO student (names, last_names, gender, grade, school, country, city) 
             VALUES ('".$names."', '".$last_names."', '".$gender."', '".$grade."', '".$school."', '".$country."', '".$city."')";
