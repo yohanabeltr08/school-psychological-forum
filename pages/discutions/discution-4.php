@@ -62,21 +62,58 @@
     </div>
     
 
-    <div class="experience">
-        <div class="container text-center ">
-            <form action="" method="">
-    
-                <h4 class="experience-tittle">Describe tu experiencia: </h4>
-                
-                <div class="colum">
-                    <textarea name="experiencia" cols="100" rows="10"></textarea>
-                </div>
-                <input type="submit" value="Enviar">
-            </form>
+    <?php
+    include('../../db/connection.php');
+
+    if(isset($_POST['send'])) {
+            $description = $_POST['text-area-experience'];
+            $experience_type = $_POST['type'];
+
+            $sql ="INSERT INTO experience (experience_type, experience_description) 
+            VALUES ('".$experience_type."', '".$description."')";
+            $result = mysqli_query($connection, $sql);
+
+            if($result) {
+                echo "<meta http-equiv='refresh' content='0'>";
+            } else {
+                echo " <script language='JavaScript'>
+                        alert('ERROR: Los datos NO fueron almacenados');
+                        </script>";
+            }
+
+        } else {
+    ?>
+        <div class="experience">
+            <div class="container text-center ">
+                <form action=" <?php $_SERVER['PHP_SELF'] ?> " method="post">
+
+                    <h4 class="experience-tittle">Describe tu experiencia: </h4>
+                    
+                    <div class="colum">
+                        <textarea name="text-area-experience" cols="100" rows="10"></textarea>
+                    </div>
+                    <input type="hidden" name="type" value="desercion">
+                    <input type="submit" value="Enviar" name="send">
+                </form>
+            </div>
         </div>
-    </div>
-    
-    
+
+
+    <?php
+            $sql ="SELECT * FROM experience";
+            $experiences = mysqli_query($connection, $sql);
+
+            while ($row = mysqli_fetch_assoc($experiences)) {
+                if ($row["experience_type"] == "desercion") {
+                    echo "<p><strong> Anonimo:</strong> " . $row["experience_description"] . "</p>";
+                }  
+            }
+            
+            mysqli_close($connection);
+
+        }
+
+    ?>
        
 
     <!-- Footer -->

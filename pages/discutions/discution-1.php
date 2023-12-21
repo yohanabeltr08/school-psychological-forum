@@ -104,8 +104,10 @@
             $experiences = mysqli_query($connection, $sql);
 
             while ($row = mysqli_fetch_assoc($experiences)) {
-                echo "<p><strong>"
-                 . $row["id"] . ":</strong> " . $row["experience_description"] . "</p>";
+                if ($row["experience_type"] == "drogras") {
+                    echo "<p><strong> Anonimo:</strong> " . $row["experience_description"] . "</p>";
+                }
+                
             }
             
 
