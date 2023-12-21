@@ -30,7 +30,8 @@
 <body>
 
 <?php
-    include("/school-psychological-forum/db/connection.php");
+    include("../../db/connection.php");
+
 
     $sql ="SELECT * FROM student";
     $students = mysqli_query($connection, $sql);

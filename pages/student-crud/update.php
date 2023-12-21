@@ -1,5 +1,5 @@
 <?php 
-    include("/school-psychological-forum/db/connection.php");
+    include("../../db/connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
