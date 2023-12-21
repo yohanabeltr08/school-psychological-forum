@@ -35,7 +35,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/img22.jpeg" class="d-block w-100" alt="opinion">
+                <img src="img/img22.jpeg" class="d-block w-100" height="590px" alt="opinion">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>HOLA</h3>
                     <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="img/Respect.jpg" class="d-block w-100" alt="respeto">
+                <img src="img/Respect.jpg" class="d-block w-100" height="590px"  alt="respeto">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>HOLA</h3>
                     <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="img/img.11.jpeg" class="d-block w-100" alt="Trabajo en equipo">
+                <img src="img/img.11.jpeg" class="d-block w-100" height="590px"  alt="Trabajo en equipo">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>HOLA</h3>
                     <h5>¡Queremos darte la bienvenida a El Rostro De La Educación!</h5>
@@ -103,7 +103,7 @@
                 <h2 class="text-center">¿Que pasa con la educacion actual?</h2>
             </div>
             
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jpyOQBver-M?si=kKslHxAM5h_sOtdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="350" height="550" src="https://www.youtube.com/embed/jpyOQBver-M?si=kKslHxAM5h_sOtdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 
