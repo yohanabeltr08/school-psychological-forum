@@ -41,7 +41,7 @@
             if($result) {
                 echo " <script language='JavaScript'>
                         alert('Los datos fueron almacenados exitosamente');
-                        location.assign('student-list.php'); 
+                        location.assign('../../index.php'); 
                         </script>";
             } else {
                 echo " <script language='JavaScript'>
@@ -85,8 +85,6 @@
             <input type="text" name="city"> <br>
 
             <input type="submit" name="send" value="AGREGAR">
-            <a href="/school-psychological-forum/pages/student-crud/student-list.php" class="actions">Regresar</a>
-
         </form>
     </div>
     

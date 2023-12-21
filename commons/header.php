@@ -13,7 +13,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/school-psychological-forum/index.php">Inicio</a>
                             </li>
-                            <a class="nav-link" href="/school-psychological-forum/pages/student-crud/register.php">Registrarse</a>
+                            
                                 <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Discusiones 
@@ -26,7 +26,10 @@
                                 <li><a class="dropdown-item" href="/school-psychological-forum/pages/discutions/discution-5.php">Problemas emocionales</a></li>
                                 <li><a class="dropdown-item" href="/school-psychological-forum/pages/discutions/discution-6.php">Conductas negativas</a></li>
                             </ul>
-                            </li>                        
+                            </li>
+                            
+                            <a class="nav-link" href="/school-psychological-forum/admin.php">Ingresar</a>
+                            <a class="nav-link" href="/school-psychological-forum/pages/student-crud/register.php">Registrarse</a>
                         </ul>
                         <form class="d-flex" role="Buscar">
                             <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
