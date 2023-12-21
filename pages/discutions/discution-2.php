@@ -35,20 +35,31 @@
                 <div class="row">
         
                     <div class="col-lg-8 col-md-8 col-sm-12 text-center"  >
-                        <p>Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
-    
-                            Existen regulaciones para el control y fiscalización del uso de estas sustancias, ya sea para uso recreativo, como el alcohol o el tabaco;  para uso farmacológico, como los tranquilizantes o analgésicos opiáceos, o  de uso general, como los solventes industriales. Hay un grupo cuyo uso es considerado ilícito y solo autorizado con fines médicos o de investigación, como el caso de la cocaína y sus derivados. El uso de sustancias psicoactivas siempre implica un grado de riesgo  de sufrir consecuencias adversas sobre distintos órganos y sistemas, las cuales pueden darse en el corto plazo, como en el caso de la intoxicación, la cual incrementa el riesgo de lesiones por accidentes o agresión, así como  conductas sexuales en condiciones inseguras. El uso repetido y  prolongado en el tiempo de estas sustancias, favorece el desarrollo de trastornos por dependencia, que son trastornos crónicos y recurrentes, caracterizados por necesidad intensa de la sustancia y pérdida de la capacidad de controlar su consumo, a pesar de consecuencias adversas en el estado de salud o en el funcionamiento interpersonal, familiar, académico, laboral o legal.
+                        <p>
+                        El acoso escolar o bullying es la exposición que sufre un niño a daños físicos y psicológicos de forma intencionada y reiterada por parte de otro, o de un grupo de ellos, cuando acude al colegio. El acosador aprovecha un desequilibrio de poder que existe entre él y su víctima para conseguir un beneficio (material o no), mientras que el acosado se siente indefenso y puede desarrollar una serie de trastornos psicológicos que afectan directamente a su salud o incluso, en situaciones extremas, conductas autodestructivas.
+
+El bullying escolar se suele producir durante el recreo, en la fila para entrar a clase, en los baños, los pasillos, los cambios de clase, al entrar y salir del centro, en el transporte escolar o en el comedor. También puede ocurrir en el aula, cuando el profesor está escribiendo en la pizarra o mientras está atendiendo a otros alumnos.
                         </p>      
                     </div>
         
                     <div class="col-lg-4 col-md-4 col-sm-12 text-center" >
                         <div class="drog-img">
-                            <img src="/school-psychological-forum/img/drog.webp"  class="img-fluid" style="max-height: 50rem;">
+                            <img src="/school-psychological-forum/img/bullying.jpeg"  class="img-fluid" style="max-height: 50rem;">
                         </div>
                     </div>
         
                 </div>
             </div>    
+        </div>
+    </div>
+
+    <!-- Video -->
+    <div class="container">
+        <div class="row video-section">
+            <div class="video-title">
+                <h2 class="text-center">Bullying y acoso en aulas</h2>
+            </div>
+            <iframe width="350" height="550" src="https://www.youtube.com/embed/tIn4m5Tb8KA?si=Kb31sbDRpWuYgxBq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     

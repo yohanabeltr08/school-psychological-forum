@@ -35,20 +35,29 @@
                 <div class="row">
         
                     <div class="col-lg-8 col-md-8 col-sm-12 text-center"  >
-                        <p>Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
-    
-                            Existen regulaciones para el control y fiscalización del uso de estas sustancias, ya sea para uso recreativo, como el alcohol o el tabaco;  para uso farmacológico, como los tranquilizantes o analgésicos opiáceos, o  de uso general, como los solventes industriales. Hay un grupo cuyo uso es considerado ilícito y solo autorizado con fines médicos o de investigación, como el caso de la cocaína y sus derivados. El uso de sustancias psicoactivas siempre implica un grado de riesgo  de sufrir consecuencias adversas sobre distintos órganos y sistemas, las cuales pueden darse en el corto plazo, como en el caso de la intoxicación, la cual incrementa el riesgo de lesiones por accidentes o agresión, así como  conductas sexuales en condiciones inseguras. El uso repetido y  prolongado en el tiempo de estas sustancias, favorece el desarrollo de trastornos por dependencia, que son trastornos crónicos y recurrentes, caracterizados por necesidad intensa de la sustancia y pérdida de la capacidad de controlar su consumo, a pesar de consecuencias adversas en el estado de salud o en el funcionamiento interpersonal, familiar, académico, laboral o legal.
+                        <p>
+                        Se considera abandono del sistema escolar por parte de los estudiantes, provocado por la combinación de factores que se generan tanto al interior del sistema como en contextos de tipo social, familiar, individual y del entorno. La tasa de deserción intra-anual solo tiene en cuenta a los alumnos que abandonan la escuela durante el año escolar, ésta se complementa con la tasa de deserción interanual que calcula aquellos que desertan al terminar el año escolar.
                         </p>      
                     </div>
         
                     <div class="col-lg-4 col-md-4 col-sm-12 text-center" >
                         <div class="drog-img">
-                            <img src="/school-psychological-forum/img/drog.webp"  class="img-fluid" style="max-height: 50rem;">
+                            <img src="/school-psychological-forum/img/decersion.jpeg"  class="img-fluid" style="max-height: 50rem;">
                         </div>
                     </div>
         
                 </div>
             </div>    
+        </div>
+    </div>
+
+    <!-- Video -->
+    <div class="container">
+        <div class="row video-section">
+            <div class="video-title">
+                <h2 class="text-center">¿Qué es la decersión escolar?</h2>
+            </div>
+            <iframe width="350" height="550" src="https://www.youtube.com/embed/MsgFzGwOgsI?si=vd38KCd2XlhugUM6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     

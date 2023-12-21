@@ -35,20 +35,32 @@
                 <div class="row">
         
                     <div class="col-lg-8 col-md-8 col-sm-12 text-center"  >
-                        <p>Las sustancias psicoactivas son diversos  compuestos naturales o sintéticos, que actúan sobre el sistema nervioso generando alteraciones en las funciones que regulan pensamientos, emociones y el comportamiento.
-    
-                            Existen regulaciones para el control y fiscalización del uso de estas sustancias, ya sea para uso recreativo, como el alcohol o el tabaco;  para uso farmacológico, como los tranquilizantes o analgésicos opiáceos, o  de uso general, como los solventes industriales. Hay un grupo cuyo uso es considerado ilícito y solo autorizado con fines médicos o de investigación, como el caso de la cocaína y sus derivados. El uso de sustancias psicoactivas siempre implica un grado de riesgo  de sufrir consecuencias adversas sobre distintos órganos y sistemas, las cuales pueden darse en el corto plazo, como en el caso de la intoxicación, la cual incrementa el riesgo de lesiones por accidentes o agresión, así como  conductas sexuales en condiciones inseguras. El uso repetido y  prolongado en el tiempo de estas sustancias, favorece el desarrollo de trastornos por dependencia, que son trastornos crónicos y recurrentes, caracterizados por necesidad intensa de la sustancia y pérdida de la capacidad de controlar su consumo, a pesar de consecuencias adversas en el estado de salud o en el funcionamiento interpersonal, familiar, académico, laboral o legal.
+                        <p>
+                        El sistema educativo en general se enfrenta a problemáticas múltiples y diversas. Hay algunas de ellas que son comunes en las aulas, las instituciones educativas e, incluso, en los ambientes de aprendizaje familiares. Es por eso que una de las tareas más abrumadoras para maestros y personal docente es la disciplina. Aquí se incluye el manejo de los alumnos con mala conducta.
+                        La educación infantil y los demás niveles educativos, están necesariamente ligados a las situaciones contextuales de sus estudiantes. Por tanto, dicho contexto será determinante al momento de construir un clima escolar positivo y beneficioso. Esto tanto para el alumno como para los maestros.
+
+                        Si bien es cierto que las consecuencias de muchos factores externos se resuelven eficientemente en las aulas, otras, en cambio, terminan en conductas disruptivas que impiden el normal funcionamiento de las clases. La vulnerabilidad social y económica, la falta de infraestructura adecuada, los problemas familiares y de comunidad son ejemplos de situaciones que desencadenan en un mal comportamiento, muchas veces agresivo y desordenado.
                         </p>      
                     </div>
         
                     <div class="col-lg-4 col-md-4 col-sm-12 text-center" >
                         <div class="drog-img">
-                            <img src="/school-psychological-forum/img/drog.webp"  class="img-fluid" style="max-height: 50rem;">
+                            <img src="/school-psychological-forum/img/behiavor.jpeg"  class="img-fluid" style="max-height: 50rem;">
                         </div>
                     </div>
         
                 </div>
             </div>    
+        </div>
+    </div>
+
+    <!-- Video -->
+    <div class="container">
+        <div class="row video-section">
+            <div class="video-title">
+                <h2 class="text-center">Conductas positivas o negativas para niños</h2>
+            </div>
+            <iframe width="350" height="550" src="https://www.youtube.com/embed/BKQdt-yAQ2Y?si=voK5FJPUQZQFTVIL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     
